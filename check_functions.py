@@ -3,16 +3,20 @@
 import csv
 import pandas as pd
 
-data = []
+# data = []
 
-# Open the CSV file and read its contents
-with open("productsandimages.csv", newline='') as csvfile:
-    reader = csv.reader(csvfile, delimiter=' ')
-    for row in reader:
-        data.append(row)
+# # Open the CSV file and read its contents
+# with open("productsandimages.csv", newline='') as csvfile:
+#     reader = csv.reader(csvfile, delimiter=' ')
+#     for row in reader:
+#         data.append(row)
 
-df = pd.DataFrame(data)
+# df = pd.DataFrame(data)
 
-df = df.loc[0, ['product_id', 'product_thumbnail']]
+# df = df.loc[0, ['product_id', 'product_thumbnail']]
 
-print(df)
+# print(df)
+
+
+df = pd.read_csv("productsandimages.csv")
+print(df.head())
