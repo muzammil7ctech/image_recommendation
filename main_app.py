@@ -47,6 +47,7 @@ def recommend(features,feature_list):
     neighbors.fit(feature_list)
 
     distances, indices = neighbors.kneighbors([features])
+    print(distances,indices)
 
     return indices
 st.write("                                               ")
